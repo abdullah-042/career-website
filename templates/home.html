@@ -2,61 +2,41 @@
 <html>
 <head>
     <title>Career Website Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-  scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <style>
-      h1 {
-        font-size: 30px;
-        font-family: Helvetica;
-        font-weight: normal;
-        color: rgb(100,100,100);
-        text-align: center;
-      }
-      #banner {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-      }
-      h2 {
-        font-size: 20px;
-        font-family: Helvetica;
-        font-weight: normal;
-        color: rgb(50,50,50);
-        text-align: center;
-      }
-      #container {
-        max-width: 720px;
-        /*
-        The first value in margin is for top and bottom
-        the second one is for right and left
-        */
-        margin: 0 auto 0 auto;
-
-
-        
-      }
-
-      
-    </style>
+    
 </head>
 <body>
-  <div id="container">
-    <h1>Welcome to our Career Website</h1>
-    <img id="banner" src="https://8a9cc4b1-f476-4edb-8a5d-46566e3332e3-00-3eop12a5r6kca.worf.replit.dev/static/banner.jpg" height="320">
-    <h2>About Us</h2>
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4"">Welcome to our Career Website</h1>
+    <img class="img-fluid" id="banner" src="https://8a9cc4b1-f476-4edb-8a5d-46566e3332e3-00-3eop12a5r6kca.worf.replit.dev/static/banner.jpg">
+    
+    <h2 class="text-center mt-2 mb-4"">About Us</h2>
+    
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <h2>Open Positions</h2>
-    <p>TODO - Show the jobs here</p>
+    
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+
+    <!--Flask templating Syntax -->
+    
+    <p>
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </p>
     
     
-    <div style="text-align:center">
-      <button>Contact Us</button>    
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg"">Contact Us</button> 
+      <p class="mt-4">Copyright @ 2024, Abdullah-042</p>
     </div>
 
 
 
     
   </div>
-  
   
 </body>
 </html>
